@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+
+
+        .image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: auto;
+            padding: 5px;
+            margin-top: 15%;
+            column-gap: 10px;
+        }
+
+
+        .img {
+            width: 200px;
+            height: 250px;
+        }
+
+        #popup {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(50, 40, 40, 0.715);
+            position: absolute;
+            top: 0;
+
+        }
+
+
+        div{
+            width: 350px;
+            height: 600px;
+
+        }
+#popimg{
+    width: 300px;
+            height: 600px;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="image-box" id="pics" >
+
+
+
+        <img class="img"   onclick="imghandle(event)"  src="img/img1.jpg" alt="img">
+
+        <img class="img"  onclick="imghandle(event)"  src="img/img2 (1).jpg" alt="img">
+
+
+        <img class="img"   onclick="imghandle(event)" src="img/img3.jpg" alt="img">
+
+  
+    </div>
+
+    <div id="popup">
+
+        <i id="xmark" style="color: rgb(0, 0, 0); background-color: aliceblue; height:20px; width:20px; border-radius: 50%; display: flex; justify-content: center;   align-items: center; position: absolute;top:20px; right:10px;" onclick="closehandel()"    class="fa-solid fa-xmark"></i>
+<div>
+        <img id="popimg" src="img/img1.jpg" alt="img"></div>
+    </div>
+
+
+    <script>
+        
+
+function imghandle(event) {
+    var image =event.target.src
+document.getElementById("pics").style.display="none"
+document.getElementById("popup").style.display="flex"
+ document.getElementById("popimg").src=image
+
+}
+
+function closehandel(){
+
+document.getElementById("pics").style.display = "flex"
+document.getElementById("popup").style.display = "none"
+
+}
+
+
+    </script>
+
+
+
+</body>
+
+</html>
